@@ -1,0 +1,29 @@
+typedef enum{
+  PSH,
+  ADD,
+  POP,
+  SET,
+  HTL
+} InstructionSet;
+
+const int program[] = {
+  PSH, 5,
+  PSH, 6,
+  ADD,
+  POP,
+  HLT
+};
+
+int ip = 0;
+
+int main(){
+  int x = fetch();
+  ip++;
+  int y = fetch;
+  printf(y);
+  return 0;
+}
+
+int fetch(){
+  return program[ip];
+}
